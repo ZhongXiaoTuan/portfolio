@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <!-- <headicon /> -->
+    <div class="home-page">
+        <headicon />
         <info-section 
             v-for="key in Object.keys(data)" 
             :key="key" 
@@ -38,5 +38,13 @@ export default {
 </script>
 
 <style>
-
+.home-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 1000px;
+    align-content: flex-start;
+    justify-content: space-around;
+}
 </style>

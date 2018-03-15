@@ -14,7 +14,7 @@ export default {
 
 <style lang="less" scoped>
 .head-icon {
-    width: 30%;
+    width: 100%;
     text-align: center;
     padding: 20px;
     .head-img {

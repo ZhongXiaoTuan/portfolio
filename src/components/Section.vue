@@ -41,7 +41,7 @@ export default {
 <style lang="less" scoped>
 @color: #0171BB;
 .section {
-    width: 35%;
+    width: 100%;
     padding: 10px 20px;
     .header {
         display: flex;
