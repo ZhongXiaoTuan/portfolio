@@ -1,6 +1,6 @@
 <template>
     <div>
-        <headicon />
+        <!-- <headicon /> -->
         <info-section 
             v-for="key in Object.keys(data)" 
             :key="key" 

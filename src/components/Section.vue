@@ -7,14 +7,17 @@
             </h3>
             <div class="line"></div>
         </div>
-        <div class="content-list" v-if="isArray">
-        </div>
-        <div class="content-keys" v-else>
-            <dl class="item" v-for="(value, key) in content" :key="key">
-                <dt class="key">{{key}}</dt>
-                <dd class="value" v-html="value"></dd>
-            </dl>
-        </div>
+        <ul class="content-list content" v-if="isArray">
+            <li class="list-item" v-for="item in content" :key="item.name">
+                <h4 class="name">{{item.name}}</h4>
+                <h6 class="info">{{item.where}} //{{item.when}}</h6>
+                <p class="detail">{{item.detail}}</p>
+            </li>
+        </ul>
+        <dl class="content-keys content" v-else v-for="(value, key) in content" :key="key">
+            <dt class="key">{{key}}</dt>
+            <dd class="value" v-html="value"></dd>
+        </dl>
     </div>
 </template>
 
@@ -24,10 +27,6 @@ import iconMap from '@/asset/iconfont/icon.map.js';
 export default {
     name: 'info-section',
     props: ['title', 'content'],
-    data() {
-        return {
-        };
-    },
     computed: {
         iconClass() {
             return iconMap.get(this.title);
@@ -42,7 +41,7 @@ export default {
 <style lang="less" scoped>
 @color: #0171BB;
 .section {
-    width: 30%;
+    width: 35%;
     padding: 10px 20px;
     .header {
         display: flex;
@@ -70,7 +69,7 @@ export default {
         .text {
             display: inline-block;
             position: relative;
-            font-size: 18px;
+            font-size: 22px;
             top: -5px;
         }
     }
@@ -80,14 +79,50 @@ export default {
         height: 5px;
         border-top: 2px solid @color;
     }
-    .content-keys {
-        .item {
-            display: flex;
+    .content {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .content-list {
+        margin-left: 15px;
+        * {
+            margin: 0;
         }
+        .list-item {
+            position: relative;
+            margin: 13px 0;
+            list-style: none;
+            &::before {
+                position: absolute;
+                display: inline-block;
+                @disc-size: 6px;
+                content: '';
+                width: @disc-size;
+                height: @disc-size;
+                border-radius: 50%;
+                background: @color;
+                left: -@disc-size - 12px;
+                top: @disc-size / 2 + 5px;
+            }
+        }
+        .name{
+            color: @color;
+            font-size: 16px;
+        }
+        .info {
+            font-size: 14px;
+            margin: 3px 0;
+        }
+        .detail {
+            font-size: 12px;
+        }
+    }
+    .content-keys {
+        display: flex;
         .key {
-            display: flex;
             color: @color;
             width: 4em;
+            white-space: nowrap;
         }
         .value {
 
