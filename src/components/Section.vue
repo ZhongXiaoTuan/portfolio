@@ -10,8 +10,8 @@
         <ul class="content-list content" v-if="isArray">
             <li class="list-item" v-for="item in content" :key="item.name">
                 <h4 class="name">{{item.name}}</h4>
-                <h6 class="info">{{item.where}} //{{item.when}}</h6>
-                <p class="detail">{{item.detail}}</p>
+                <h6 class="info" v-html="`${item.where} // ${item.when}`"></h6>
+                <p class="detail" v-html="item.detail"></p>
             </li>
         </ul>
         <dl class="content-keys content" v-else v-for="(value, key) in content" :key="key">
