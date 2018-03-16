@@ -1,5 +1,5 @@
 <template>
-    <div class="section">
+    <div class="section" :class="{ wider: isArray }">
         <div class="header">
             <h3 class="title">
                 <i class="iconfont icon" :class="`icon-${iconClass}`"></i>
@@ -39,13 +39,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@color: #0171BB;
+@import url(../asset/style/variables.less);
+
 .section {
-    width: 100%;
+    box-sizing: border-box;
     padding: 10px 20px;
+    width: @width-narrow;
+    &.wider {
+        width: @width-wide;
+    }
     .header {
         display: flex;
-        color: @color;
+        color: @color-major;
         align-items: center;
     }
     .title {
@@ -61,7 +66,7 @@ export default {
             font-size: @size;
             width: @size + 2 * @bd-inner + 2 * @bd-outter;
             height: @size + 2 * @bd-inner + 2 * @bd-outter;
-            border: @bd-outter solid @color;
+            border: @bd-outter solid @color-major;
             border-radius: 50%;
             text-indent: @bd-inner;
             margin-right: 3px;
@@ -77,7 +82,7 @@ export default {
         margin-left: 15px;
         flex-grow: 1;
         height: 5px;
-        border-top: 2px solid @color;
+        border-top: 2px solid @color-major;
     }
     .content {
         padding: 0 20px;
@@ -100,13 +105,13 @@ export default {
                 width: @disc-size;
                 height: @disc-size;
                 border-radius: 50%;
-                background: @color;
+                background: @color-major;
                 left: -@disc-size - 12px;
                 top: @disc-size / 2 + 5px;
             }
         }
         .name{
-            color: @color;
+            color: @color-major;
             font-size: 16px;
         }
         .info {
@@ -120,7 +125,7 @@ export default {
     .content-keys {
         display: flex;
         .key {
-            color: @color;
+            color: @color-major;
             width: 4em;
             white-space: nowrap;
         }

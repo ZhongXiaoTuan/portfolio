@@ -13,8 +13,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import url(../asset/style/variables.less);
+
 .head-icon {
-    width: 100%;
+    box-sizing: border-box;
+    width: @width-narrow;
     text-align: center;
     padding: 20px;
     .head-img {
@@ -24,7 +27,7 @@ export default {
         width: @size;
         border-radius: 50%;
         border: 3px solid white;
-        box-shadow: 0 0 0 3px #0171BB;
+        box-shadow: 0 0 0 3px @color-major;
     }
     .major-title {
         letter-spacing: .2em;
