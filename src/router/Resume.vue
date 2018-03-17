@@ -11,7 +11,7 @@ import Section from '@/components/Section';
 import HeadIcon from '@/components/HeadIcon';
 
 export default {
-    name: 'home',
+    name: 'resume',
     components: {
         'info-section': Section,
         'headicon': HeadIcon,
@@ -33,13 +33,14 @@ export default {
 </script>
 
 <style lang="less">
+@import url(../asset/style/variables.less);
+
 .home-page {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
-    // width: 1440px;
-    height: 900px;
+    height: @h;
     // box-shadow: 0 1px 7px #cccc;
     justify-content: space-between;
 }

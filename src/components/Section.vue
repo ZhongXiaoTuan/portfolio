@@ -129,9 +129,6 @@ export default {
             width: 4em;
             white-space: nowrap;
         }
-        .value {
-
-        }
     }
 }
 
