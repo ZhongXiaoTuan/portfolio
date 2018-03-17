@@ -11,8 +11,7 @@ export default {
     name: 'home',
     methods: {
         to(url) {
-            const host = location.host;
-            window.open(`/familytree`);
+            window.open(url);
         }
     }
 }
