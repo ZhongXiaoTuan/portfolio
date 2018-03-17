@@ -12,7 +12,7 @@ export default {
     methods: {
         to(url) {
             const host = location.host;
-            window.open(`${host}/familytree`);
+            window.open(`/familytree`);
         }
     }
 }
