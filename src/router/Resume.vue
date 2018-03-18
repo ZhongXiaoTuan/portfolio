@@ -22,7 +22,7 @@ export default {
         }
     },
     created() {
-        axios.get('/static/data.json').then(
+        axios.get('/static/resume/data.json').then(
             res => {
                 this.data = res.data;
             },

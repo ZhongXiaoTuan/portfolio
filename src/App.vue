@@ -12,6 +12,9 @@ export default {
 
 <style>
 @import url('./asset/iconfont/iconfont.css');
+body {
+  margin: 0;
+}
 * {
   font-weight: 400;
 }
