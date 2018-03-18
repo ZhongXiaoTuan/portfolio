@@ -1,6 +1,6 @@
 <template>
     <div class="head-icon">
-        <img class="head-img" src="../asset/img/header.png" />
+        <img class="head-img" src="../../asset/img/header.png" />
         <h1 class="major-title">钟 媛</h1>
         <h2 class="minor-title">上海交通大学</h2>
     </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url(../asset/style/variables.less);
+@import url(../../asset/style/variables.less);
 
 .head-icon {
     box-sizing: border-box;
@@ -37,6 +37,18 @@ export default {
     .minor-title {
         margin: 0;
         font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: @to-2-cols){
+    .head-icon {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: @to-1-col){
+    .head-icon {
+        width: 100%;
     }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div>
       钟媛的个人主页
-      <router-link to="resume">简历</router-link>
-      <a @click.stop="to('familytree')">家谱树</a>
+      <router-link class="link" to="resume">简历</router-link>
+      <a class="link" @click.stop="to('familytree')">家谱树</a>
   </div>
 </template>
 
@@ -17,6 +17,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 
 </style>

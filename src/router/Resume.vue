@@ -7,8 +7,8 @@
 
 <script>
 import axios from 'axios';
-import Section from '@/components/Section';
-import HeadIcon from '@/components/HeadIcon';
+import Section from '@/components/resume/Section';
+import HeadIcon from '@/components/resume/HeadIcon';
 
 export default {
     name: 'resume',
@@ -37,11 +37,28 @@ export default {
 
 .home-page {
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
     height: @h;
     // box-shadow: 0 1px 7px #cccc;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-content: center;
+    overflow-y: hidden;
+    // margin-top: 5vh;
+}
+
+@media screen and (max-width: @to-2-cols) {
+    .home-page {
+        height: @h-2-cols;
+    }
+}
+
+
+@media screen and (max-width: @to-1-col) {
+    .home-page {
+        height: auto;
+    }
 }
 </style>

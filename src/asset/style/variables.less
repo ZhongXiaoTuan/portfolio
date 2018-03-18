@@ -3,7 +3,13 @@
 @color-txt: #333;
 
 // width
-@w: 1280px;
-@h: 1000px;
-@width-narrow: 0.24 * @w;
-@width-wide: 0.41 * @w;
+@w: 1440px;
+@h: 890px;
+@r: 0.25;
+@width-narrow: @r * @w;
+@width-wide: (1 - @r) / 2 * @w;
+
+// responsive
+@to-1-col: 900px;
+@to-2-cols: 1200px;
+@h-2-cols: 1400px;

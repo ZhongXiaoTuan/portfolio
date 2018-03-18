@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url(../asset/style/variables.less);
+@import url(../../asset/style/variables.less);
 
 .section {
     box-sizing: border-box;
@@ -95,7 +95,7 @@ export default {
         }
         .list-item {
             position: relative;
-            margin: 13px 0;
+            margin: 7px 0;
             list-style: none;
             &::before {
                 position: absolute;
@@ -124,13 +124,28 @@ export default {
     }
     .content-keys {
         display: flex;
+        margin: 7px;
         .key {
             color: @color-major;
             width: 4em;
             white-space: nowrap;
         }
+        .value {
+            margin-left: 25px;
+        }
     }
 }
 
+@media screen and (max-width: @to-2-cols){
+    .section, .section.wider {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: @to-1-col){
+    .section, .section.wider {
+        width: 100%;
+    }
+}
 
 </style>
