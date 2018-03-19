@@ -116,7 +116,7 @@
             <div class="box">
                 <img class="intro-img" src="/static/resume/intro.jpg" alt="" />
                 <div class="intro-text border-box col-flex grow serif">
-                    <h1 class="upper bold margin-less">钟 媛   上海交通大学</h1>
+                    <h1 class="upper bold margin-less">钟媛   上海交通大学</h1>
                     <h1 class="lower smaller margin-less">
                         手机：13636330842<br/>
                         邮箱：zhong_yuan1213@sina.com<br/>
