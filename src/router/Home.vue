@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <div class="content intro">
+        <div class="content intro clear-bg">
             <div class="box">
                 <div class="intro-text border-box col-flex grow serif">
                     <h1 class="upper bold margin-less">钟媛 x 作品集</h1>
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content clear-bg">
             <div class="box">
                 <div class="side-txt">
                     <h1 class="serif bold major-title">迪士尼 × 咪咕<br/>「乐玩+」APP</h1>
@@ -61,7 +61,7 @@
                         获取最新的资讯，并通过论坛与其他用户交流互动。<br/>
                         产品还包括迪士尼天气/闹钟/主题等多款小应用。
                     </p>
-                    <a class="link" @click.prevent="routo('Lewan')">查看详情</a>
+                    <router-link target="_blank" class="link" :to="{ name: 'Lewan' }">查看详情</router-link>
                 </div>
                 <img class="side-img" src="/static/resume/lewan+1.jpg" />
             </div>
@@ -95,7 +95,7 @@
                          同时具备完善的亲属称谓计算功能，<br/>
                          是节庆走亲访友和加深家族情感的实用工具。
                     </p>
-                    <a class="link" @click.prevent="to('familytree')">试一试</a>
+                    <a class="link" target="_blank" href="/familytree">试一试</a>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
                 <img class="side-img small" src="/static/resume/recho.png" />
             </div>
         </div>
-        <div class="content intro">
+        <div class="content intro clear-bg">
             <div class="box">
                 <img class="intro-img" src="/static/resume/intro.jpg" alt="" />
                 <div class="intro-text border-box col-flex grow serif">
@@ -121,7 +121,7 @@
                         手机：13636330842<br/>
                         邮箱：zhong_yuan1213@sina.com<br/>
                         网站： www.zhongxiaotuan.com<br/>
-                        <a class="link" @click.prevent="routo('Resume')">查看我的简历</a>
+                        <router-link target="_blank" class="link" :to="{ name: 'Resume' }">查看我的简历</router-link>
                     </h1>
                 </div>
             </div>
@@ -132,14 +132,6 @@
 <script>
 export default {
     name: 'home',
-    methods: {
-        to(url) {
-            window.open(url);
-        },
-        routo(name) {
-            this.$router.push({ name });
-        },
-    }
 }
 </script>
 
@@ -193,7 +185,13 @@ export default {
     width: 100%;
     padding: 100px 0;
     &:nth-of-type(2n) {
-        .bg-colored;
+        background: #fafafa;
+    }
+    &:nth-of-type(2n) {
+        background: #f1f1f1;
+    }
+    &.clear-bg {
+        background: transparent;
     }
 }
 
