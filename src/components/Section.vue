@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url(../../asset/style/variables.less);
+@import url(../asset/style/variables.less);
 
 .section {
     box-sizing: border-box;
